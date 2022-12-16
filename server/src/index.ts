@@ -10,7 +10,7 @@ app.get('/get', (request, reponse)=>{
         return reponse.json({"response": c1.salarioLiquido()})    
 
     } catch (error) {
-        return reponse.json({"response": false})    
+        return reponse.json({"response": null})    
         
     }
 

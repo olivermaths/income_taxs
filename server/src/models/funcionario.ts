@@ -48,7 +48,6 @@ export class Funcionario{
 
 
     imposto_de_renda(salary: number): number {
-        console.log("here is : " + salary)
         if(salary <= 1903.98){
             return 0
         }

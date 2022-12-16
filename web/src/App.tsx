@@ -4,8 +4,6 @@ import { DefaultInput } from './components/input'
 import { Message } from './components/message'
 
 
-
-
 function App() {
   let response:any;
   const [showmessage, setMesasge] = useState(false)
@@ -18,12 +16,13 @@ function App() {
     fetch(`http://localhost:3333/get?salary=${salary}&dependente=${dependentes}`)
     .then(response => response.json())
     .then(body => setdata(body))
-    if(data.response){
+    if(data.response != null){
       setMesasge(true)
     }else{
       setMesasge(false)
     }
   }
+  
   function onSalaryInput(e: ChangeEvent<HTMLInputElement>){
     let value =  e.target.value == ""? 0 :  parseInt(e.target.value);
     if(!Number.isNaN(value)){
